@@ -43,7 +43,7 @@ const Post = ({post}) => {
 			</div>
 			<section className="pb-16">
 				<div className="post-content">
-				<ReactMarkdown children={post.markdown}
+				<ReactMarkdown
 				components={{
 					code(props) {
 						const {children, className, node} = props
@@ -62,7 +62,8 @@ const Post = ({post}) => {
 						);
 					},
 				}}
-				/>
+				>{post.markdown}
+					</ReactMarkdown>
 				</div>
 			</section>
 			<div className="flex justify-center pb-16">
