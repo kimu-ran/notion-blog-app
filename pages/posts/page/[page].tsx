@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import {getPostsByPage, getAllPosts, getNumberOfPages, getAllTags} from '../../../lib/notionAPI';
+import {getPostsByPage, getNumberOfPages, getAllTags} from '../../../lib/notionAPI';
 import SinglePost from '../../../components/Post/SinglePost';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Pagination from '../../../components/Pagination/Pagination';
@@ -62,6 +62,7 @@ const BlogPageList =({ postsByPage, numberOfPage, allTags }) => {
 
 			</div>
 			<Pagination numberOfPage={numberOfPage} />
+
 			<Tag tags={allTags} />
     </main>
 
