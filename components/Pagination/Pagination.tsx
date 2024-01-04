@@ -3,8 +3,8 @@ import React  from "react";
 import { getPageLink } from "../../lib/blog-helper";
 
 type Props = {
-	numberOfPage: number;
-	tag: string;
+	numberOfPage: any;
+	tag?: string;
 }
 
 const Pagination = (props: Props) => {

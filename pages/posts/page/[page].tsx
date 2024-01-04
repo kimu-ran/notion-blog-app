@@ -25,6 +25,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const postsByPage = await getPostsByPage(
 		parseInt(currentPage.toString(), 10)
 	);
+	console.log(numberOfPage);
   return {
     props: {
       postsByPage,
